@@ -30,17 +30,20 @@ namespace Reaction_game
             public string PlayerName { get; set; }
             public int Score { get; set; }
 
+            public int Missed { get; set; }
+
             public PlayerScore() { } // required for JSON deserialization
 
-            public PlayerScore(string playerName, int score)
+            public PlayerScore(string playerName, int score, int missed)
             {
                 PlayerName = playerName;
                 Score = score;
+                Missed = missed;
             }
 
             public override string ToString()
             {
-                return $"{PlayerName}: {Score}";
+                return $"{PlayerName}  Score:{Score}   Missed:{Missed}";
             }
         }
 
@@ -57,10 +60,7 @@ namespace Reaction_game
         }
 
 
-        private void scoreboard_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
         
 
        
@@ -132,7 +132,7 @@ namespace Reaction_game
                 // Add the player's score to the list
                 if (!string.IsNullOrEmpty(playerName))
                 {
-                    scores.Add(new PlayerScore(playerName, score));
+                    scores.Add(new PlayerScore(playerName, score, missed));
                     SaveScoresToFile();
                     UpdateScoreboard();
                 }
@@ -152,7 +152,7 @@ namespace Reaction_game
                     pictureBox1.Visible = true;
                     
                 }
-                else
+                if (choice == 2)
                 {
                     pictureBox2.Visible = true;
                     
@@ -195,6 +195,8 @@ namespace Reaction_game
             {
                 string json = JsonSerializer.Serialize(scores);
                 File.WriteAllText(scoreFilePath, json);
+                MessageBox.Show("Saving to: " + Path.GetFullPath(scoreFilePath));
+
             }
             catch (Exception ex)
             {
