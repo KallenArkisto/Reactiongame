@@ -183,6 +183,7 @@ namespace Reaction_game
 
                 // Optionally update a label showing the current player name
                 currentPlayerLabel.Text = "Player: " + playerName;
+                this.ActiveControl = null;
             }
             else
             {
