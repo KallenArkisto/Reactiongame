@@ -32,7 +32,6 @@ namespace Reaction_game
 
             public int Missed { get; set; }
 
-            public PlayerScore() { } // required for JSON deserialization
 
             public PlayerScore(string playerName, int score, int missed)
             {
@@ -47,8 +46,6 @@ namespace Reaction_game
             }
         }
 
-
-
         public Form1()
         {
             InitializeComponent();
@@ -58,12 +55,6 @@ namespace Reaction_game
             this.Load += Form1_Load;
 
         }
-
-
-        
-        
-
-       
 
         private void Start_Click(object sender, EventArgs e)
         {
@@ -137,32 +128,25 @@ namespace Reaction_game
                     UpdateScoreboard();
                 }
             }
-            }
+        }
         private void pictureTimer_Tick(object sender, EventArgs e)
-        {
-            
-
+        {           
            int choice = rand.Next(1, 3); 
-            
             {
-                
-
                 if (choice == 1)
                 {
-                    pictureBox1.Visible = true;
-                    
+                    pictureBox1.Visible = true;                    
                 }
                 if (choice == 2)
                 {
-                    pictureBox2.Visible = true;
-                    
+                    pictureBox2.Visible = true;                    
                 }
             }
         }
         private void UpdateScoreboard()
         {
-            // Sort descending by score
-            var topScores = scores.OrderByDescending(s => s.Score).Take(10).ToList();
+            //Top Scores. Sort by Descending
+            var topScores = scores.OrderByDescending(s => s.Score).Take(20).ToList();
 
             scoreboardListBox.Items.Clear();
 
@@ -181,7 +165,7 @@ namespace Reaction_game
                 playerName = inputName;
                 MessageBox.Show($"Player name set to: {playerName}");
 
-                // Optionally update a label showing the current player name
+                
                 currentPlayerLabel.Text = "Player: " + playerName;
                 this.ActiveControl = null;
             }
@@ -196,7 +180,8 @@ namespace Reaction_game
             {
                 string json = JsonSerializer.Serialize(scores);
                 File.WriteAllText(scoreFilePath, json);
-                MessageBox.Show("Saving to: " + Path.GetFullPath(scoreFilePath));
+                MessageBox.Show("Round Finished \n" +
+                    "Saving to: " + Path.GetFullPath(scoreFilePath));
 
             }
             catch (Exception ex)

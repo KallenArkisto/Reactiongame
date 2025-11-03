@@ -48,9 +48,10 @@
             // 
             // Start
             // 
-            Start.Location = new Point(553, 238);
+            Start.Location = new Point(790, 397);
+            Start.Margin = new Padding(4, 5, 4, 5);
             Start.Name = "Start";
-            Start.Size = new Size(102, 48);
+            Start.Size = new Size(146, 80);
             Start.TabIndex = 0;
             Start.Text = "Start (Spacebar)";
             Start.UseVisualStyleBackColor = true;
@@ -59,18 +60,20 @@
             // scoreboardListBox
             // 
             scoreboardListBox.FormattingEnabled = true;
-            scoreboardListBox.ItemHeight = 15;
-            scoreboardListBox.Location = new Point(301, 12);
+            scoreboardListBox.ItemHeight = 25;
+            scoreboardListBox.Location = new Point(430, 20);
+            scoreboardListBox.Margin = new Padding(4, 5, 4, 5);
             scoreboardListBox.Name = "scoreboardListBox";
-            scoreboardListBox.Size = new Size(221, 274);
+            scoreboardListBox.Size = new Size(314, 454);
             scoreboardListBox.TabIndex = 2;
             // 
             // SetPlayerName
             // 
             SetPlayerName.BackColor = SystemColors.Info;
-            SetPlayerName.Location = new Point(686, 3);
+            SetPlayerName.Location = new Point(953, 5);
+            SetPlayerName.Margin = new Padding(4, 5, 4, 5);
             SetPlayerName.Name = "SetPlayerName";
-            SetPlayerName.Size = new Size(103, 23);
+            SetPlayerName.Size = new Size(174, 38);
             SetPlayerName.TabIndex = 3;
             SetPlayerName.Text = "Set Player Name";
             SetPlayerName.UseVisualStyleBackColor = false;
@@ -79,17 +82,19 @@
             // scoreLabel
             // 
             scoreLabel.BackColor = SystemColors.ControlLightLight;
-            scoreLabel.Location = new Point(553, 92);
+            scoreLabel.Location = new Point(790, 153);
+            scoreLabel.Margin = new Padding(4, 5, 4, 5);
             scoreLabel.Name = "scoreLabel";
-            scoreLabel.Size = new Size(100, 23);
+            scoreLabel.Size = new Size(141, 31);
             scoreLabel.TabIndex = 4;
             scoreLabel.Text = "score";
             // 
             // missClickLabel
             // 
-            missClickLabel.Location = new Point(552, 155);
+            missClickLabel.Location = new Point(789, 258);
+            missClickLabel.Margin = new Padding(4, 5, 4, 5);
             missClickLabel.Name = "missClickLabel";
-            missClickLabel.Size = new Size(100, 23);
+            missClickLabel.Size = new Size(141, 31);
             missClickLabel.TabIndex = 5;
             missClickLabel.Text = "0";
             // 
@@ -102,9 +107,10 @@
             // 
             timeLabel.BackColor = SystemColors.ActiveCaption;
             timeLabel.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            timeLabel.Location = new Point(367, 442);
+            timeLabel.Location = new Point(524, 737);
+            timeLabel.Margin = new Padding(4, 0, 4, 0);
             timeLabel.Name = "timeLabel";
-            timeLabel.Size = new Size(230, 72);
+            timeLabel.Size = new Size(329, 120);
             timeLabel.TabIndex = 8;
             timeLabel.Text = "Timer";
             timeLabel.TextAlign = ContentAlignment.MiddleCenter;
@@ -113,10 +119,9 @@
             // 
             pictureBox1.BackColor = SystemColors.AppWorkspace;
             pictureBox1.Image = Properties.Resources.Green_BG_One;
-            pictureBox1.Location = new Point(11, 31);
-            pictureBox1.Margin = new Padding(2);
+            pictureBox1.Location = new Point(16, 52);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(265, 483);
+            pictureBox1.Size = new Size(379, 805);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
@@ -126,10 +131,9 @@
             // 
             pictureBox2.BackColor = SystemColors.AppWorkspace;
             pictureBox2.Image = Properties.Resources.Red_BG_Zero;
-            pictureBox2.Location = new Point(686, 31);
-            pictureBox2.Margin = new Padding(2);
+            pictureBox2.Location = new Point(980, 52);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(265, 483);
+            pictureBox2.Size = new Size(379, 805);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
@@ -139,10 +143,9 @@
             // 
             currentPlayerLabel.AutoSize = true;
             currentPlayerLabel.BackColor = SystemColors.Control;
-            currentPlayerLabel.Location = new Point(552, 74);
-            currentPlayerLabel.Margin = new Padding(2, 0, 2, 0);
+            currentPlayerLabel.Location = new Point(789, 123);
             currentPlayerLabel.Name = "currentPlayerLabel";
-            currentPlayerLabel.Size = new Size(45, 15);
+            currentPlayerLabel.Size = new Size(69, 25);
             currentPlayerLabel.TabIndex = 11;
             currentPlayerLabel.Text = "Player1";
             // 
@@ -155,25 +158,27 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = SystemColors.Control;
-            label1.Location = new Point(552, 137);
+            label1.Location = new Point(789, 228);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(101, 15);
+            label1.Size = new Size(149, 25);
             label1.TabIndex = 12;
             label1.Text = "MissClick counter";
             // 
             // playerNameTextBox
             // 
-            playerNameTextBox.Location = new Point(795, 3);
+            playerNameTextBox.Location = new Point(1136, 5);
+            playerNameTextBox.Margin = new Padding(4, 5, 4, 5);
             playerNameTextBox.Name = "playerNameTextBox";
-            playerNameTextBox.Size = new Size(155, 23);
+            playerNameTextBox.Size = new Size(220, 31);
             playerNameTextBox.TabIndex = 13;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(962, 546);
+            ClientSize = new Size(1374, 910);
             Controls.Add(playerNameTextBox);
             Controls.Add(label1);
             Controls.Add(currentPlayerLabel);
@@ -185,6 +190,7 @@
             Controls.Add(SetPlayerName);
             Controls.Add(scoreboardListBox);
             Controls.Add(Start);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             Text = "Reaction game";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
