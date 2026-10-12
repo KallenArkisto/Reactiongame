@@ -10,7 +10,7 @@ kehitys listaan olisi: pisteistä karsitaan miinukset pois, ennen kuin ne kirjoi
 Aloitus näkymä. pelaajan nimen voi antaa halutessa oikeaan yläkulmaan
 ![alt text](<Reaction game SC 1.png>)
 
-Peli käynnissä. paina näppäimistön nappeja ainak kun ne ilmestyvät näytölle.
+Peli käynnissä. paina näppäimistön nappeja heti, kun ne ilmestyvät näytölle.
 ![alt text](<Reaction game SC 2.png>)
 
 Peli loppu. tulos tallennetaan listaan. listan tallennus paikka näytetään omassa ikkunassa.
